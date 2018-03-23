@@ -16,7 +16,6 @@ import butterknife.ButterKnife;
 
 public class CommentViewHolder extends BaseViewHolder {
 
-
     @BindView(R.id.tv_title)
     TextView tvTitle;
     @BindView(R.id.text)

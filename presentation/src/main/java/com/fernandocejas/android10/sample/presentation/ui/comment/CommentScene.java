@@ -10,7 +10,6 @@ import java.util.List;
  */
 public interface CommentScene extends MvpView {
 
-
     boolean isCommentEmpty();
 
     void onBindComment(List<PComment> transform);

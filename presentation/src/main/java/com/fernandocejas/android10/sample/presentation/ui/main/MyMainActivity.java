@@ -17,7 +17,6 @@ import butterknife.ButterKnife;
 
 public class MyMainActivity extends MyBaseActivity  implements HasComponent<UserComponent> {
 
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 

@@ -14,7 +14,6 @@ import java.util.List;
 public class CommentAdapter extends BaseQuickAdapter<PComment,CommentViewHolder> {
 
 
-
     public CommentAdapter(int layoutResId, @Nullable List<PComment> data) {
         super(layoutResId, data);
     }

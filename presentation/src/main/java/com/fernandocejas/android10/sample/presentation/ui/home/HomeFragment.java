@@ -36,7 +36,6 @@ public class HomeFragment extends MyBaseFragment implements HomeScene {
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-
     @Inject
     HomePresenter mPresenter;
 
@@ -62,7 +61,6 @@ public class HomeFragment extends MyBaseFragment implements HomeScene {
     protected void initField() {
         this.getComponent(UserComponent.class).inject(this);
         mPresenter.onAttach(this);
-
     }
 
     @Override
@@ -71,7 +69,6 @@ public class HomeFragment extends MyBaseFragment implements HomeScene {
         recyclerView.addItemDecoration(new VerticalSpaceItemDecoration(48));
         showLoading();
         mPresenter.getGiphyTrend();
-
     }
 
     @Override

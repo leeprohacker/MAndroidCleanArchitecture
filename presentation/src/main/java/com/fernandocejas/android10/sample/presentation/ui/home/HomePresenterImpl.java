@@ -41,7 +41,6 @@ public class HomePresenterImpl extends MyBasePresenter<HomeScene> implements Hom
         this.actionLike = actionLike;
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
@@ -56,10 +55,7 @@ public class HomePresenterImpl extends MyBasePresenter<HomeScene> implements Hom
         }
         isRequest = true;
         this.getGiphyTrend.execute(new HomeObserver(), GetGiphyTrend.Params.forParam(limit, offset));
-
     }
-
-
 
     @Override
     public void onShare(Context context, PDataItem item) {
@@ -91,7 +87,6 @@ public class HomePresenterImpl extends MyBasePresenter<HomeScene> implements Hom
             }
         },ActionLike.Params.forParam(item.getId(),isLike));
     }
-
 
     private final class HomeObserver extends DefaultObserver<List<DDataItem>> {
         @Override

@@ -12,7 +12,6 @@ public interface HomePresenter extends MvpPresenter<HomeScene> {
 
     void getGiphyTrend();
 
-
     void onShare(Context context, PDataItem item);
 
     void onLiked(PDataItem item , int position);
