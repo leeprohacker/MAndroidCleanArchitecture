@@ -8,9 +8,7 @@ import io.reactivex.Observable;
 import okhttp3.Request;
 import retrofit2.http.Query;
 
-/**
- * Created by Dieu on 27/02/2017.
- */
+
 
 public interface ApiRetrofit {
 

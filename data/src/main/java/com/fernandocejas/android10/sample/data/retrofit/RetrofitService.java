@@ -31,17 +31,15 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by Dieu on 22/02/2017.
- */
 
+@Singleton
 public class RetrofitService implements ApiRetrofit {
-
 
     private static String TAG = RetrofitService.class.getSimpleName();
     public ApiService mApiService;
     public ApiSetting mApiSetting;
 
+    @Inject
     public  RetrofitService(Context context) {
         Log.d(TAG,"xyz--RetrofitService-"+(mApiService ==null));
         if (mApiService == null) {

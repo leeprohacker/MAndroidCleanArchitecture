@@ -44,7 +44,6 @@ public class UserDataStoreFactory {
     UserDataStoreFactory(@NonNull Context context, @NonNull UserCache userCache) {
         this.context = context.getApplicationContext();
         this.userCache = userCache;
-
         retrofitService = new RetrofitService(context);
     }
 

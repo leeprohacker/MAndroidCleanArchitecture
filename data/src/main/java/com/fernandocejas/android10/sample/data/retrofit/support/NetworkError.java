@@ -14,9 +14,7 @@ import retrofit2.Response;
 
 import static java.net.HttpURLConnection.HTTP_UNAUTHORIZED;
 
-/**
- * Created by Leeprohacker on 11/29/17.
- */
+
 
 public class NetworkError extends Throwable {
 

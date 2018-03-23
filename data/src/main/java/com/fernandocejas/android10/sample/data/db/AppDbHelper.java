@@ -85,31 +85,23 @@ public class AppDbHelper implements DbHelper {
 
     @Override
     public Observable<Comment> postComment(String content, String idPost) {
-        return Observable.fromCallable(new Callable<Comment>() {
-            @Override
-            public Comment call() throws Exception {
-                Comment comment = new Comment();
-                comment.setContent(content);
-                comment.setIdPost(idPost);
-                String timeStamp = new SimpleDateFormat("HH:mm dd/MM/yyyy").format(Calendar.getInstance().getTime());
-                comment.setTime(timeStamp);
-                long id = mDaoSession.getCommentDao().insert(comment);
-                return mDaoSession.getCommentDao().load(id);
-            }
+        return Observable.fromCallable(() -> {
+            Comment comment = new Comment();
+            comment.setContent(content);
+            comment.setIdPost(idPost);
+            String timeStamp = new SimpleDateFormat("HH:mm dd/MM/yyyy").format(Calendar.getInstance().getTime());
+            comment.setTime(timeStamp);
+            long id = mDaoSession.getCommentDao().insert(comment);
+            return mDaoSession.getCommentDao().load(id);
         });
     }
 
     @Override
     public Observable<List<Comment>> getComments(String idPost) {
-        return Observable.fromCallable(new Callable<List<Comment>>() {
-
-            @Override
-            public List<Comment> call() throws Exception {
-                List<Comment> list = mDaoSession.getCommentDao()
-                        .queryBuilder().where(CommentDao.Properties.IdPost.eq(idPost)).list();
-                Log.d(TAG,"xyz---getComments--"+idPost+"~"+list.isEmpty());
-                return list;
-            }
+        return Observable.fromCallable(() -> {
+            List<Comment> list = mDaoSession.getCommentDao()
+                    .queryBuilder().where(CommentDao.Properties.IdPost.eq(idPost)).list();
+            return list;
         });
     }
 

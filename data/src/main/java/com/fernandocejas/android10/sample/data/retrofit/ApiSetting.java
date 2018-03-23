@@ -2,9 +2,6 @@ package com.fernandocejas.android10.sample.data.retrofit;
 
 import javax.inject.Inject;
 
-/**
- * Created by Dieu on 22/02/2017.
- */
 
 public class ApiSetting {
     private static final String TAG = ApiSetting.class.getSimpleName();
