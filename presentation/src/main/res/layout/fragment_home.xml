@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kennyc.view.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multiStateView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:msv_animateViewChanges="true"
+    app:msv_emptyView="@layout/partial_empty"
+    app:msv_errorView="@layout/partial_message"
+    app:msv_loadingView="@layout/partial_progressbar_view"
+    app:msv_viewState="loading">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_30"
+        android:scrollbars="vertical" />
+
+</com.kennyc.view.MultiStateView>

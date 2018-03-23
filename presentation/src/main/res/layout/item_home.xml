@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:paddingLeft="@dimen/dimen10"
+        android:paddingRight="@dimen/dimen10">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_avatar"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:transitionName="@string/transition_photo"
+            app:actualImageScaleType="focusCrop"
+            app:fadeDuration="300"
+            app:placeholderImage="@color/grey_30"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="false"
+            app:roundedCornerRadius="4dp"
+            app:viewAspectRatio="1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:maxLines="1"
+            android:text="XXXXXXXXXX"
+            android:textColor="@color/black_80" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:maxLines="1"
+            android:text="XXXXXXXXXX"
+            android:textColor="@color/black_40"
+            android:textSize="@dimen/sp_12" />
+
+    </RelativeLayout>
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/my_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_weight="1"
+        android:transitionName="@string/transition_photo"
+        app:actualImageScaleType="focusCrop"
+        app:fadeDuration="300"
+        app:placeholderImage="@color/grey_30"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="false"
+        app:viewAspectRatio="1.5" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/view_like"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/grey_90"
+                app:srcCompat="@drawable/ic_thumb_up_black_20dp" />
+
+            <TextView
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Thích"
+                android:textColor="@color/grey_90"
+                android:textSize="14sp"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/md_blue_grey_900"
+                app:srcCompat="@drawable/ic_chat_bubble_black_20dp" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                fontPath="fonts/regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Bình luận"
+                android:textColor="@color/md_blue_grey_900"
+                android:textSize="14sp"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/md_blue_grey_900"
+                app:srcCompat="@drawable/ic_share_20dp" />
+
+            <TextView
+                android:id="@+id/tv_share"
+                fontPath="fonts/regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Chia sẻ"
+                android:textColor="@color/md_blue_grey_900"
+                android:textSize="14sp"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
