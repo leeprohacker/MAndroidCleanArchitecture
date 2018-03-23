@@ -27,6 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
 import me.yokeyword.fragmentation.anim.DefaultVerticalAnimator;
 
 /**
@@ -84,7 +85,7 @@ public class CommentFragment extends MyBaseFragment implements CommentScene {
 
     @Override
     protected void initView() {
-        setFragmentAnimator(new DefaultVerticalAnimator());
+        setFragmentAnimator(new DefaultHorizontalAnimator());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.addItemDecoration(new VerticalSpaceItemDecoration(3));
         showLoading();
