@@ -38,9 +38,7 @@ import javax.inject.Singleton;
 import io.reactivex.Observable;
 
 
-/**
- * Created by janisharali on 08/12/16.
- */
+
 
 @Singleton
 public class AppDbHelper implements DbHelper {
